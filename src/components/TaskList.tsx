@@ -15,8 +15,8 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
-    if(!newTaskTitle)
-      return alert('Field: title is empty!!!');
+    if(!newTaskTitle.trim())
+      return;
     
     const newTask = {
       id: Math.random(),
